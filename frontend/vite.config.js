@@ -9,6 +9,12 @@ const viteConfig = defineConfig({
     host: '0.0.0.0',
     port: import.meta.env.VITE_APP_PORT || 5173,
     overlay: true,
+    hmr: {
+        // Use secure WebSocket if your site is served over HTTPS
+        protocol: 'wss',
+        // Replace 'salon-appointments-8e5a.onrender.com' with your actual public server address
+        host: 'salon-appointments-8e5a.onrender.com',
+      },
   },
 });
 
