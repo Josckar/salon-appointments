@@ -1,8 +1,9 @@
 import axios from 'axios';
-const address = import.meta.env.BACKEND_APP_ADDRESS;
-const port = import.meta.env.BACKEND_APP_PORT;
-const fullUrl = `${address}:${port}`;
+const address = import.meta.env.VITE_BACKEND_APP_ADDRESS;
+const port = (':', import.meta.env.VITE_BACKEND_APP_PORT) || '';
 
+const fullUrl = `${address}${port}`;
+console.log(fullUrl);
 const api = axios.create({
     baseURL: fullUrl,
     withCredentials: true, 
