@@ -15,7 +15,7 @@ import User from './models/User.mjs';
 
 const app = express();
 
-dotenv.config({ path: '../.env' });
+dotenv.config();
 
 const mongoStoreOptions = {
     mongoUrl: process.env.MONGO_URI,
@@ -41,7 +41,7 @@ app.use(passport.session());
 const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',') || ['http://localhost:5173'];
 
 app.use(cors({
-    origin: allowedOrigins,
+    origin: (origin, callback) => callback(null, true), // Allow all origins
     methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
     credentials: true,
