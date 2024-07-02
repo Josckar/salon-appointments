@@ -2,14 +2,14 @@ export const setCookie = (cname, cvalue, exdays) => {
     let d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = 'expires=' + d.toGMTString();
-    document.cookie = `${cname}=${cvalue};${expires};path=/;SameSite=Strict;Secure`;
+    document.cookie = `${cname}=${cvalue};${expires};path=/;SameSite=None;Secure`;
 };
 
 export const setCookieInMins = (cname, cvalue, exmins) => {
     let d = new Date();
     d.setTime(d.getTime() + exmins * 60 * 1000);
     let expires = 'expires=' + d.toGMTString();
-    document.cookie = `${cname}=${cvalue};${expires};path=/;SameSite=Strict;Secure`;
+    document.cookie = `${cname}=${cvalue};${expires};path=/;SameSite=None;Secure`;
 };
 
 export const getCookie = (cname) => {
@@ -35,5 +35,5 @@ export const checkCookie = (cname) => {
 };
 
 export const deleteCookie = (cname) => {
-    document.cookie = `${cname}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Strict; Secure`;
+    document.cookie = `${cname}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=None; Secure`;
 };
