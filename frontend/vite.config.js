@@ -7,7 +7,7 @@ const viteConfig = defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    port: import.meta.env.VITE_APP_PORT || 5173,
+    port: 10000,
     overlay: true,
     hmr: {
         // Use secure WebSocket if your site is served over HTTPS
