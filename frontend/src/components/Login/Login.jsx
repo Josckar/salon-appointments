@@ -19,7 +19,7 @@ const Login = () => {
 
         const checkAuth = async () => {
             try {
-                const response = await api.get(`$/api/check-auth`);
+                const response = await api.get(`/api/check-auth`);
                 if (response.data.authenticated) {
                     navigate('/profile');
                 }
