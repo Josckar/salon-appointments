@@ -28,6 +28,10 @@ const sessionOptions = {
     saveUninitialized: false,
     dbName: process.env.DB_NAME || 'test',
     store: MongoStore.create(mongoStoreOptions),
+    cookie:{
+        sameSite: 'none',
+        secure: true
+    }
 };
 
 app.use(express.json());
