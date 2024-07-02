@@ -15,7 +15,7 @@ import User from './models/User.mjs';
 
 const app = express();
 
-dotenv.config();
+dotenv.config({ path: '../.env' });
 
 const mongoStoreOptions = {
     mongoUrl: process.env.MONGO_URI,

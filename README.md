@@ -4,17 +4,16 @@
 
 The Salon Appointment System is a full-stack web application for booking, managing, and canceling appointments for both clients and administrators in a salon. 
 
-The server requires two .env files to run, [/backend/.env](/backend/.env)
+The server requires a .env file to run, [.env](./.env)
 ```
-MONGO_URI=mongodb://127.0.0.1:27017/ # Your mongo URI
-DB_NAME=test # Your DB Name
-PORT=5000 # The port on which the app will run
-ALLOWED_ORIGINS=http://127.0.0.1:5173,http://localhost:5173 # A Comma separated list of your CORS Origins. For development purposes, this is (typically) sufficient
-```
-, and [/frontend/.env](/frontend/.env)
-```
-BACKEND_APP_ADDRESS=http://127.0.0.1 # Your backend app address
-BACKEND_APP_PORT=5000 # Your backend app port
+MONGO_URI=mongodb://127.0.0.1:27017/ 
+DB_NAME=test 
+PORT=5000
+# A Comma separated list of your CORS Origins. For development purposes, this is (typically) sufficient
+ALLOWED_ORIGINS=http://127.0.0.1:5173,http://localhost:5173 
+
+BACKEND_APP_ADDRESS=http://127.0.0.1 
+BACKEND_APP_PORT=5000 
 ```
 
 ## Features
