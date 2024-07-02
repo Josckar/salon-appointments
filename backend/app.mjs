@@ -41,7 +41,7 @@ app.use(passport.session());
 const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',') || ['http://localhost:5173'];
 
 app.use(cors({
-    origin: (origin, callback) => callback(null, true), // Allow all origins
+    origin: allowedOrigins,
     methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
     credentials: true,
