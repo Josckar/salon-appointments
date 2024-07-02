@@ -1,6 +1,6 @@
 import axios from 'axios';
-const address = import.meta.env.VITE_APP_ADDRESS;
-const port = import.meta.env.VITE_APP_PORT;
+const address = import.meta.env.BACKEND_APP_ADDRESS;
+const port = import.meta.env.BACKEND_APP_PORT;
 const fullUrl = `${address}:${port}`;
 
 const api = axios.create({
