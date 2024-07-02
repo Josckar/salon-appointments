@@ -1,0 +1,97 @@
+.login-container {
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    height: 100%;
+    width: 62.5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.placeholder {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.login-form-container {
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.label {
+    margin-bottom: 1%;
+    margin-top: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+
+}
+
+.new-account-login {
+    text-align: center;
+}
+
+.new-account-link {
+    color: pink;
+    cursor: pointer;
+    transition: ease-in-out all 0.3s;
+}
+
+.new-account-link:hover {
+    color: hotpink;
+}
+
+.login-div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.login-loading {
+    width: 90px;
+    height: 90px;
+    display: none;
+}
+
+
+@media only screen and (max-width: 950px) {
+    .login-container {
+        height: auto; 
+        width: 90%; 
+        padding: 20px; 
+        box-sizing: border-box; 
+    }
+
+    .placeholder, .login-form-container {
+        width: 100%; 
+        margin-top: 10px; 
+    }
+
+    .label {
+        margin-top: 10%; 
+    }
+
+    .logo {
+        height: 150px; 
+        width: 150px;
+    }
+
+    .login-div {
+        flex-direction: column; 
+    }
+
+    .new-account-login, .new-account-link {
+        font-size: 14px; 
+    }
+}

@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+.pink-btn {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.pink-btn:hover {
+    background-color: hotpink;
+}
