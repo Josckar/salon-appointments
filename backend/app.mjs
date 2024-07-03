@@ -14,7 +14,7 @@ import User from './models/User.mjs';
 
 
 const app = express();
-
+app.set('trust proxy', 1);
 dotenv.config();
 
 const mongoStoreOptions = {
